@@ -82,7 +82,7 @@ void mul(stack_t **stack, __attribute__((unused))unsigned int);
 void add(stack_t **stack, __attribute__((unused))unsigned int);
 void pchar(stack_t **stack, __attribute__((unused))unsigned int);
 void pstr(stack_t **stack, __attribute__((unused))unsigned int);
-void rot1(stack_t **stack, __attribute__((unused))unsigned int);
+void rotl(stack_t **stack, __attribute__((unused))unsigned int);
 void mod(stack_t **stack, __attribute__((unused))unsigned int);
 void rotr(stack_t **stack, __attribute__((unused))unsigned int);
 void _stack(stack_t **stack, __attribute__((unused))unsigned int);
