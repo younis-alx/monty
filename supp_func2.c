@@ -95,3 +95,37 @@ void mul(stack_t **stack, __attribute__((unused))unsigned int linenum)
 		exit(EXIT_FAILURE);
 	}
 }
+/**
+ * mod - computes the rest of the division
+ * of the second top element of the stack by the top element of the stack.
+ * @stack: double list
+ * @linenumber: line
+ */
+void mod(stack_t **stack, __attribute__((unused))unsigned int linenumber)
+{
+	stack_t *freeable;
+
+	if (!*stack || !(*stack)->next)
+	{
+		fprintf(stderr, "L%u: can't mod, stack too short\n"
+				, monty.line_number);
+		free_all();
+		exit(EXIT_FAILURE);
+	}
+
+	if ((*stack)->n == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", monty.line_number);
+		free_all();
+		exit(EXIT_FAILURE);
+	}
+
+	if (*stack && (*stack)->next)
+	{
+		(*stack)->next->n %= (*stack)->n;
+		freeable = *stack;
+		*stack = (*stack)->next;
+		(*stack)->prev = NULL;
+		free(freeable);
+	}
+}
