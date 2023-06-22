@@ -44,11 +44,11 @@ void pstr(stack_t **stack,  __attribute__((unused))unsigned int linenum)
 
 
 /**
- * rotr -rotates the stack to the top
+ * rotl -rotates the stack to the top
  * @stack: head of stack
  * @linenum: current ln
  */
-void rotr(stack_t **stack, __attribute__((unused))unsigned int linenum)
+void rotl(stack_t **stack, __attribute__((unused))unsigned int linenum)
 {
 	stack_t *first, *second;
 
@@ -72,12 +72,12 @@ void rotr(stack_t **stack, __attribute__((unused))unsigned int linenum)
 }
 
 /**
- * rotl - otates the stack to the bottom.
+ * rotr - otates the stack to the bottom.
  * @stack: head of stack
  * @linenum: current ln
  *
  */
-void rotl(stack_t **stack, __attribute__((unused))unsigned int linenum)
+void rotr(stack_t **stack, __attribute__((unused))unsigned int linenum)
 {
 	stack_t *first, *second;
 
