@@ -89,3 +89,29 @@ void swap(stack_t **stack, __attribute__((unused))unsigned int linenum)
 		exit(EXIT_FAILURE);
 	}
 }
+
+/**
+ * add - adds top two stack mems
+ * @stack: double list
+ * @linenum: line
+ */
+void add(stack_t **stack, __attribute__((unused))unsigned int linenum)
+{
+	stack_t *freeable;
+
+	if (*stack && (*stack)->next)
+	{
+		(*stack)->next->n += (*stack)->n;
+		freeable = *stack;
+		*stack = (*stack)->next;
+		(*stack)->prev = NULL;
+		free(freeable);
+	}
+	else
+	{
+		fprintf(stderr, "L%u: can't add, stack too short\n",
+				monty.line_number);
+		free_all();
+		exit(EXIT_FAILURE);
+	}
+}
