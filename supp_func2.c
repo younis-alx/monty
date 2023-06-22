@@ -99,9 +99,9 @@ void mul(stack_t **stack, __attribute__((unused))unsigned int linenum)
  * mod - computes the rest of the division
  * of the second top element of the stack by the top element of the stack.
  * @stack: double list
- * @linenumber: line
+ * @linenum: line
  */
-void mod(stack_t **stack, __attribute__((unused))unsigned int linenumber)
+void mod(stack_t **stack, __attribute__((unused))unsigned int linenum)
 {
 	stack_t *freeable;
 

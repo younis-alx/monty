@@ -99,8 +99,8 @@ void op_choose(stack_t **stack, char *opcode)
 		{"pstr", pstr},
 		{"rot1", rot1},
 		{"rotr", rotr},
-		{"stack", stack},
-		{"queue", queue},
+		{"stack", _stack},
+		{"queue", _queue},
 		{NULL, NULL}
 	};
 	op = strtok(opcode, "\n");
