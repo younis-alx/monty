@@ -5,7 +5,6 @@
  * the stack, followed by a new line
  * @stack: points to head of stack
  * @linenum: current line no
- *
  */
 void pchar(stack_t **stack, __attribute__((unused))unsigned int linenum)
 {
@@ -30,7 +29,6 @@ void pchar(stack_t **stack, __attribute__((unused))unsigned int linenum)
  * at the top of the stack, followed by a new line.
  * @stack: head of stack
  * @linenum: current line num of monty
- *
  */
 void pstr(stack_t **stack,  __attribute__((unused))unsigned int linenum)
 {
@@ -49,8 +47,6 @@ void pstr(stack_t **stack,  __attribute__((unused))unsigned int linenum)
  * rotl -rotates the stack to the top
  * @stack: head of stack
  * @linenum: current ln
- *
- *
  */
 void rotl(stack_t **stack, __attribute__((unused))unsigned int linenum)
 {

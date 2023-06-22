@@ -1,5 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
+
 #define _GNU_SOURCE
 
 #include <stdio.h>
@@ -86,7 +87,6 @@ void mod(stack_t **stack, __attribute__((unused))unsigned int);
 void rotr(stack_t **stack, __attribute__((unused))unsigned int);
 void _stack(stack_t **stack, __attribute__((unused))unsigned int);
 void _queue(stack_t **stack, __attribute__((unused))unsigned int);
-
 
 
 #endif
