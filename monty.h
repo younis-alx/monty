@@ -70,5 +70,6 @@ void push_queue(char *);
 bool check_input(char *str);
 void op_choose(stack_t **stack, char *opcode);
 void push(char *);
-void pall(stack_t **stack, __attribute__((unused))unsigned int linenumber);
+void pall(stack_t **stack, __attribute__((unused))unsigned int );
+void pint(stack_t **stack, __attribute__((unused))unsigned int );
 #endif

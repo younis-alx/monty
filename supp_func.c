@@ -86,6 +86,7 @@ void op_choose(stack_t **stack, char *opcode)
 	char *op;
 	instruction_t fncs[] = {
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL}
 	};
 	op = strtok(opcode, "\n");
