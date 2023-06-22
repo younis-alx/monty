@@ -75,6 +75,7 @@ void pint(stack_t **stack, __attribute__((unused))unsigned int);
 void pop(stack_t **stack, __attribute__((unused))unsigned int);
 void nop(stack_t **stack, __attribute__((unused))unsigned int);
 void sub(stack_t **stack, __attribute__((unused))unsigned int);
+void div(stack_t **stack, __attribute__((unused))unsigned int);
 
 void swap(stack_t **stack, __attribute__((unused))unsigned int);
 void add(stack_t **stack, __attribute__((unused))unsigned int);

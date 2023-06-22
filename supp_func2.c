@@ -37,3 +37,35 @@ void sub(stack_t **stack, __attribute__((unused))unsigned int linenum)
 		exit(EXIT_FAILURE);
 	}
 }
+/**
+ * div_op - divs top two stack mems
+ * @stack: double list
+ * @linenum: line
+ */
+void div(stack_t **stack, __attribute__((unused))unsigned int linenum)
+{
+	stack_t *freeable;
+
+	if (!*stack || !(*stack)->next)
+	{
+		fprintf(stderr, "L%u: can't div, stack too short\n"
+				, monty.line_number);
+		free_all();
+		exit(EXIT_FAILURE);
+	}
+	if ((*stack)->n == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", monty.line_number);
+		free_all();
+		exit(EXIT_FAILURE);
+	}
+
+	if (*stack && (*stack)->next)
+	{
+		(*stack)->next->n /= (*stack)->n;
+		freeable = *stack;
+		*stack = (*stack)->next;
+		(*stack)->prev = NULL;
+		free(freeable);
+	}
+}
