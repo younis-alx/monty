@@ -85,7 +85,7 @@ void swap(stack_t **stack, __attribute__((unused))unsigned int linenum)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n",
 				monty.line_number);
-		free_it_all();
+		free_all();
 		exit(EXIT_FAILURE);
 	}
 }
