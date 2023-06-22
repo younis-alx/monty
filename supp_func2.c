@@ -69,3 +69,29 @@ void _div(stack_t **stack, __attribute__((unused))unsigned int linenum)
 		free(freeable);
 	}
 }
+/**
+ * mul -multiplies the second top element of the stack with the
+ *top element of the stack
+ * @stack: double list
+ * @linenum: line
+ */
+void mul(stack_t **stack, __attribute__((unused))unsigned int linenum)
+{
+	stack_t *freeable;
+
+	if (*stack && (*stack)->next)
+	{
+		(*stack)->next->n *= (*stack)->n;
+		freeable = *stack;
+		*stack = (*stack)->next;
+		(*stack)->prev = NULL;
+		free(freeable);
+	}
+	else
+	{
+		fprintf(stderr, "L%u: can't mul, stack too short\n",
+				monty.line_number);
+		free_all();
+		exit(EXIT_FAILURE);
+	}
+}
