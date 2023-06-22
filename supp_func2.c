@@ -38,11 +38,11 @@ void sub(stack_t **stack, __attribute__((unused))unsigned int linenum)
 	}
 }
 /**
- * div_op - divs top two stack mems
+ * _div - divs top two stack mems
  * @stack: double list
  * @linenum: line
  */
-void div(stack_t **stack, __attribute__((unused))unsigned int linenum)
+void _div(stack_t **stack, __attribute__((unused))unsigned int linenum)
 {
 	stack_t *freeable;
 
