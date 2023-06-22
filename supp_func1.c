@@ -23,7 +23,7 @@ void pall(stack_t **stack, __attribute__((unused))unsigned int linenum)
 
 
 /**
- * pint - print int in stack
+ * pint - int in stack
  * @stack: double list
  * @linenum: line
  */
@@ -38,3 +38,31 @@ void pint(stack_t **stack, __attribute__((unused))unsigned int linenum)
 		exit(EXIT_FAILURE);
 	}
 }
+
+
+
+/**
+ * pop - delete node from top of list
+ * @stack: double list
+ * @linenum: line
+ */
+void pop(stack_t **stack, __attribute__((unused))unsigned int linenum)
+{
+	stack_t *freeable = *stack;
+
+	if (*stack)
+	{
+		*stack = (*stack)->next;
+		if (*stack)
+			(*stack)->prev = NULL;
+		free(freeable);
+	}
+	else
+	{
+		fprintf(stderr, "L%u: can't pop an empty stack\n"
+				, monty.line_number);
+		free_all();
+		exit(EXIT_FAILURE);
+	}
+}
+
