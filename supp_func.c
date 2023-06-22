@@ -91,6 +91,7 @@ void op_choose(stack_t **stack, char *opcode)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 	op = strtok(opcode, "\n");
