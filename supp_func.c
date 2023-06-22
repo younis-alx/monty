@@ -95,9 +95,10 @@ void op_choose(stack_t **stack, char *opcode)
 		{"div", _div},
 		{"mul", mul},
 		{"mod", mod},
-/*
 		{"pchar", pchar},
 		{"pstr", pstr},
+
+/*
 		{"rot1", rot1},
 		{"rotr", rotr},
 		{"stack", _stack},
