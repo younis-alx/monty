@@ -75,7 +75,7 @@ void free_all(void)
 }
 
 /**
- * free_build - frees the stack
+ * free_stack - frees the stack
  * @h: the head of stack
  *
  *
