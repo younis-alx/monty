@@ -59,7 +59,7 @@ typedef struct monty_s
 
 monty_t monty;
 
-
+extern monty_t monty;
 
 void montystruct_init(void);
 void openfile(int, char *);

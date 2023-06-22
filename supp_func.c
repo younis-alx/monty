@@ -1,4 +1,3 @@
-#include "monty.h"
 
 /**
 * push_queue - push to the end of list
