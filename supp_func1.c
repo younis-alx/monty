@@ -34,7 +34,7 @@ void pint(stack_t **stack, __attribute__((unused))unsigned int linenum)
 	else
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", monty.line_number);
-		free_it_all();
+		free_all();
 		exit(EXIT_FAILURE);
 	}
 }
